@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	  <title>CMS Rails | <%=@page_title || "Admin"%></title>
+	 
+	  <%= stylesheet_link_tag('application', :media => 'all')%>
+  
+  </head>
+	<body>
+		<div id="header">
+			<h1>A Simple Rails App</h1> 
+			
+		</div>
+
+	<div class="main">
+		<% if !flash[:notice].blank? %>
+     <div class="notice">
+       <%= flash[:notice] %>
+      </div>
+     <% end %>
+		<div class="content">
+		  <!-- before yield -->
+	      <%= yield %>
+	     <!-- after yield -->
+	
+		</div>
+	</div>
+<div class="footer">
+
+</div>
+	</body>
+</html>
