@@ -11,7 +11,6 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8
   pool: 5
   username: simple_cms
   password: root
@@ -44,11 +43,15 @@ test:
 #
 # You can use this database configuration with:
 #
-  production:
-  url: <%= ENV['DATABASE_URL'] %>
+ # production:
+  #url: <%= ENV['DATABASE_URL'] %>
 #
 #production:
  # <<: *default
-  database: heroku_c6b459cd202b6b2
-  username: bb3f505343c64c
-  password: 8a9d351c
+ # database: heroku_c6b459cd202b6b2
+ # username: bb3f505343c64c
+ # password: 8a9d351c
+
+ group :production do   
+     gem   'pg'
+ end
