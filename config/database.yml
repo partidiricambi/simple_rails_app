@@ -50,7 +50,7 @@ production:
   <<: *default
   database: heroku_c6b459cd202b6b2
   username: bb3f505343c64c
-  password: 8a9d351c
+  password: ec52769b52ec62c
 
  #group :production do   
   #   gem   'pg'
