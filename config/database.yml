@@ -43,15 +43,15 @@ test:
 #
 # You can use this database configuration with:
 #
- # production:
-  #url: <%= ENV['DATABASE_URL'] %>
-#
-#production:
- # <<: *default
- # database: heroku_c6b459cd202b6b2
- # username: bb3f505343c64c
- # password: 8a9d351c
+production:
+  url: <%= ENV['DATABASE_URL'] %>
 
- group :production do   
-     gem   'pg'
- end
+production:
+  <<: *default
+  database: heroku_c6b459cd202b6b2
+  username: bb3f505343c64c
+  password: 8a9d351c
+
+ #group :production do   
+  #   gem   'pg'
+ #end
