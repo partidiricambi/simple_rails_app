@@ -1,0 +1,25 @@
+users-imac:simple_cms user$ heroku run rake db:migrate
+Running `rake db:migrate` attached to terminal... up, run.3299
+rake aborted!
+Mysql2::Error: Access denied for user 'bb3f505343c64c'@'ip-10-183-214-83.ec2.internal' (using password: YES)
+/app/vendor/bundle/ruby/2.0.0/gems/mysql2-0.3.16/lib/mysql2/client.rb:70:in `connect'
+/app/vendor/bundle/ruby/2.0.0/gems/mysql2-0.3.16/lib/mysql2/client.rb:70:in `initialize'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/connection_handling.rb:87:in `connection'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/migration.rb:910:in `initialize'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/migration.rb:807:in `new'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/migration.rb:807:in `up'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/migration.rb:785:in `migrate'
+/app/vendor/bundle/ruby/2.0.0/gems/activerecord-4.1.1/lib/active_record/railties/databases.rake:34:in `block (2 levels) in <top (required)>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
